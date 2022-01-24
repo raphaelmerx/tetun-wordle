@@ -180,18 +180,21 @@ function Header({ onShowStats, onShowHelp, onShowSetting }) {
   return (
     <header className="px-4 mx-auto max-w-lg w-full pt-2 pb-4" id="header">
       <Head>
-        <title>Katla - Permainan kata harian</title>
+        <title>Tetun Wordle - Halimar ho vokabuláriu Tetun</title>
         <meta
           name="description"
-          content="Tebak kata tersembunyi dalam 6 percobaan. Kata baru tersedia setiap hari."
+          content="Siik to'ok liafuan segredu, koko dala 6 ba okos. Sei iha liafuan foun loroloron."
         />
 
         <meta property="og:url" content="https://tetun-wordle.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Katla - Permainan kata harian" />
+        <meta
+          property="og:title"
+          content="Tetun Wordle - Halimar ho vokabuláriu Tetun"
+        />
         <meta
           property="og:description"
-          content="Tebak kata tersembunyi dalam 6 percobaan. Kata baru tersedia setiap hari"
+          content="Siik to'ok liafuan segredu, koko dala 6 ba okos. Sei iha liafuan foun loroloron."
         />
         <meta
           property="og:image"
@@ -210,7 +213,7 @@ function Header({ onShowStats, onShowHelp, onShowSetting }) {
           className="uppercase text-4xl text-gray-200 font-bold w-max mx-auto relative z-10"
           style={{ letterSpacing: 4 }}
         >
-          Katla
+          Tetun Wordle
         </h1>
         <div className="absolute flex flex-row items-center justify-between inset-0">
           <button onClick={onShowHelp} title="Bantuan" aria-label="Pengaturan">
