@@ -154,9 +154,11 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { hash, date } = await fetch(
-    "https://tetun-wordle.vercel.app/api/hash"
-  ).then((res) => res.json());
+  const { hash, date } = await fetch("https://tetun-wordle.vercel.app/api/hash")
+    .then((res) => res.json())
+    .catch((error) => {
+      return { hash: "d2WhZWJ1", date: "2022-01-24" };
+    });
   return {
     props: {
       hash: hash,
