@@ -74,7 +74,9 @@ function getMidnightDate() {
 async function main() {
   const [usedWords, allWords] = await Promise.all([
     getUsedWords(),
-    fetch("https://katla.vercel.app/api/words").then((res) => res.json()),
+    fetch("https://tetun-wordle.vercel.app/api/words").then((res) =>
+      res.json()
+    ),
   ]);
 
   let word = allWords[Math.floor(Math.random() * allWords.length)];

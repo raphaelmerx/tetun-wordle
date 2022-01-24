@@ -3,11 +3,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const kbbi = await fetch("https://kbbi.vercel.app").then((res) => res.json());
-  const words = kbbi.entries
+  const tetunorg = await fetch(
+    "https://tetun.org/static/tet-64c2165f04476c65e620a737a5a2aecb.json"
+  ).then((res) => res.json());
+  const words = Object.keys(tetunorg)
     .map((entry) => {
       const [word] = entry.split("/").reverse();
-      return word;
+      return word
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace("'", "");
     })
     .filter(
       (word) =>

@@ -154,9 +154,9 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { hash, date } = await fetch("https://katla.vercel.app/api/hash").then(
-    (res) => res.json()
-  );
+  const { hash, date } = await fetch(
+    "https://tetun-wordle.vercel.app/api/hash"
+  ).then((res) => res.json());
   return {
     props: {
       hash: hash,
@@ -184,17 +184,20 @@ function Header({ onShowStats, onShowHelp, onShowSetting }) {
           content="Tebak kata tersembunyi dalam 6 percobaan. Kata baru tersedia setiap hari."
         />
 
-        <meta property="og:url" content="https://katla.vercel.app/" />
+        <meta property="og:url" content="https://tetun-wordle.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Katla - Permainan kata harian" />
         <meta
           property="og:description"
           content="Tebak kata tersembunyi dalam 6 percobaan. Kata baru tersedia setiap hari"
         />
-        <meta property="og:image" content="https://katla.vercel.app/og.png" />
+        <meta
+          property="og:image"
+          content="https://tetun-wordle.vercel.app/og.png"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="katla.vercel.app" />
+        <meta property="twitter:domain" content="tetun-wordle.vercel.app" />
 
         <meta name="theme-color" content="#15803D" />
         <link href="/katla-32x32.png" rel="icon shortcut" sizes="3232" />

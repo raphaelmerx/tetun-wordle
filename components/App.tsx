@@ -93,7 +93,7 @@ export default function App(props: Props) {
 
     if (!words.includes(userAnswer)) {
       markInvalid();
-      showMessage("Tidak ada dalam KBBI");
+      showMessage("Laiha liafuan ida-ne'e iha Tetun");
       return;
     }
 

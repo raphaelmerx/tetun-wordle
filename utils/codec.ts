@@ -25,3 +25,31 @@ export function decode(hash: string): string {
       .join("") + padding;
   return Buffer.from(base64, "base64").toString();
 }
+
+// function encode(word) {
+//   const base64 = window.btoa(word);
+//   const equalSigns = base64.split("").filter((char) => char === "=").length;
+//   const withoutEq = base64.replace(/=/g, "");
+//   let newStr = "";
+//   for (let i = 0; i < withoutEq.length; i++) {
+//     newStr += String.fromCharCode(
+//       withoutEq.charCodeAt(i) + (i % 2 === 0 ? 1 : -1)
+//     );
+//   }
+//
+//   return newStr + equalSigns;
+// }
+//
+// function decode(hash) {
+//   const [equalSigns, ...chars] = hash.split("").reverse();
+//   const padding = "=".repeat(Number(equalSigns));
+//   const base64 =
+//     chars
+//       .reverse()
+//       .map((str, i) => {
+//         const charCode = str.charCodeAt(0) + (i % 2 === 0 ? -1 : 1);
+//         return String.fromCharCode(charCode);
+//       })
+//       .join("") + padding;
+//   return decodeURIComponent(escape(window.atob( base64 ))).toString();
+// }

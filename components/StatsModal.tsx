@@ -59,7 +59,7 @@ export default function StatsModal(props: Props) {
       text += `${answerEmojis.join("")}\n`;
     });
 
-    text += "\nhttps://katla.vercel.app";
+    text += "\nhttps://tetun-wordle.vercel.app";
     return text;
   }
 
@@ -121,7 +121,7 @@ export default function StatsModal(props: Props) {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <Modal.Title>Statistik</Modal.Title>
+      <Modal.Title>Estatistika</Modal.Title>
       <div className="grid grid-rows-1 grid-cols-4 text-center w-3/4 gap-1 mx-auto mb-8">
         <div>
           <div className="text-md sm:text-xl lg:text-3xl">{totalPlay}</div>

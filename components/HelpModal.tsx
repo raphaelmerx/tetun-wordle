@@ -10,26 +10,24 @@ export default function HelpModal(props: Props) {
   const { isOpen, onClose } = props;
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <Modal.Title>Cara Bermain</Modal.Title>
+      <Modal.Title>Oinsá atu halimar</Modal.Title>
       <div className="text-sm">
+        <p className="mb-2">Siik to&apos;ok liafuan, koko dala 6 ba okos.</p>
         <p className="mb-2">
-          Tebak <strong className="uppercase">Katla</strong> dalam 6 percobaan
+          Liafuan koko hotu-hotu tenke iha letra 5. Hanehan ENTER hodi haruka
+          resposta.
         </p>
         <p className="mb-2">
-          Setiap tebakan harus merupakan kata valid 5 huruf sesuai KBBI. Tekan
-          tombol ENTER untuk mengirimkan jawaban
-        </p>
-        <p className="mb-2">
-          Setelah jawaban dikirimkan, warna kotak akan berubah untuk menunjukkan
-          seberapa dekat tebakanmu dari kata rahasia
+          Depois de haruka resposta, kor letra sei muda hodi hatudu letra
+          ne&apos;ebé loos ka lae.
         </p>
         <hr className="border-gray-700 mb-4" />
-        <strong className="text-lg mb-4 block">Contoh</strong>
+        <strong className="text-lg mb-4 block">Por ezemplu</strong>
         <div
           className="grid grid-cols-5 grid-rows-1 gap-1.5 w-64 mb-2"
           style={{ aspectRatio: "6 / 1" }}
         >
-          {"semua".split("").map((char, i) => {
+          {"saude".split("").map((char, i) => {
             return (
               <Tile
                 key={i}
@@ -41,13 +39,13 @@ export default function HelpModal(props: Props) {
           })}
         </div>
         <div className="mb-4">
-          Ada huruf <strong>S</strong> di kata dan posisinya sudah tepat
+          Liafuan iha letra <strong>S</strong> no pozisaun loos ona.
         </div>
         <div
           className="grid grid-cols-5 grid-rows-1 gap-1.5 w-64 mb-2"
           style={{ aspectRatio: "6 / 1" }}
         >
-          {"kasur".split("").map((char, i) => {
+          {"salju".split("").map((char, i) => {
             return (
               <Tile
                 key={i}
@@ -59,13 +57,13 @@ export default function HelpModal(props: Props) {
           })}
         </div>
         <div className="mb-4">
-          Ada huruf <strong>A</strong> di kata namun posisinya belum tepat
+          Liafuan iha letra <strong>A</strong> maibé pozisaun seidauk loos.
         </div>
         <div
           className="grid grid-cols-5 grid-rows-1 gap-1.5 w-64 mb-2"
           style={{ aspectRatio: "6 / 1" }}
         >
-          {"duduk".split("").map((char, i) => {
+          {"siklu".split("").map((char, i) => {
             return (
               <Tile
                 key={i}
@@ -77,13 +75,10 @@ export default function HelpModal(props: Props) {
           })}
         </div>
         <div className="mb-4">
-          Tidak ada huruf <strong>K</strong> di kata
+          Laiha letra <strong>K</strong> iha liafuan ida-ne&apos;e.
         </div>
         <hr className="border-gray-700 mb-4" />
-        <p className="font-semibold">
-          Akan ada <strong className="uppercase">Katla</strong> baru setiap
-          hari!
-        </p>
+        <p className="font-semibold">Sei iha liafuan foun loroloron!</p>
       </div>
     </Modal>
   );

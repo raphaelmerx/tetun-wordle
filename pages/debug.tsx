@@ -34,7 +34,7 @@ export default function Debug(props: Props) {
         <>
           <p className="mb-4">
             Send this code to{" "}
-            <a className="text-blue-400" href="https://twitter.com/pveyes">
+            <a className="text-blue-400" href="https://twitter.com/raphaelmerx">
               @pveyes
             </a>{" "}
             on Twitter
@@ -49,9 +49,9 @@ export default function Debug(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { hash, date } = await fetch("https://katla.vercel.app/api/hash").then(
-    (res) => res.json()
-  );
+  const { hash, date } = await fetch(
+    "https://tetun-wordle.vercel.app/api/hash"
+  ).then((res) => res.json());
   return {
     props: {
       hash: hash,
