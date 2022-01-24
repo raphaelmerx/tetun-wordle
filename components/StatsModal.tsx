@@ -43,7 +43,7 @@ export default function StatsModal(props: Props) {
       gameState.answers[gameState.attempt - 1] === answer
         ? gameState.attempt
         : "X";
-    let text = `Katla ${num} ${score}/6\n\n`;
+    let text = `Tetun Wordle ${num} ${score}/6\n\n`;
 
     gameState.answers.filter(Boolean).forEach((userAnswer) => {
       const answerEmojis = getAnswerStates(userAnswer, answer).map((state) => {
@@ -108,7 +108,7 @@ export default function StatsModal(props: Props) {
     } else {
       navigator.clipboard.writeText(text);
       onClose();
-      showMessage("Disalin ke clipboard");
+      showMessage("Kopia tiha ona");
     }
   }
 
@@ -125,20 +125,20 @@ export default function StatsModal(props: Props) {
       <div className="grid grid-rows-1 grid-cols-4 text-center w-3/4 gap-1 mx-auto mb-8">
         <div>
           <div className="text-md sm:text-xl lg:text-3xl">{totalPlay}</div>
-          <div className="text-xs md:text-sm break-word">Dimainkan</div>
+          <div className="text-xs md:text-sm break-word">Played</div>
         </div>
         <div>
           <div className="text-md sm:text-xl lg:text-3xl">
             {totalPlay === 0 ? 0 : Math.round((totalWin / totalPlay) * 100)}
           </div>
-          <div className="text-xs md:text-sm break-word">% Menang</div>
+          <div className="text-xs md:text-sm break-word">% Won</div>
         </div>
         <div>
           <div className="text-md sm:text-xl lg:text-3xl">
             {stats.currentStreak}
           </div>
           <div className="text-xs md:text-sm break-word">
-            <em>Streak</em> Saat Ini
+            Current <em>Streak</em>
           </div>
         </div>
         <div>
@@ -146,12 +146,12 @@ export default function StatsModal(props: Props) {
             {stats.maxStreak}
           </div>
           <div className="text-xs md:text-sm break-word">
-            <em>Streak</em> Maksimum
+            Max <em>Streak</em>
           </div>
         </div>
       </div>
       <div className="w-10/12 mx-auto mb-8">
-        <h3 className="uppercase font-semibold mb-4">Distribusi Tebakan</h3>
+        <h3 className="uppercase font-semibold mb-4">Score distribution</h3>
         {Array(6)
           .fill("")
           .map((_, i) => {
@@ -185,7 +185,7 @@ export default function StatsModal(props: Props) {
           <div className="flex items-center justify-between w-3/4 m-auto my-8 gap-2">
             <div className="text-center flex flex-1 flex-col">
               <div className="font-semibold uppercase text-xs md:text-md">
-                Katla berikutnya
+                Tetun Wordle tuir-mai
               </div>
               <RemainingTime />
             </div>
@@ -270,34 +270,5 @@ function RemainingTime() {
 function WordDefinition({ answer }) {
   const { data = [] } = useSWR(`/api/define/${answer}`, fetcher);
 
-  return (
-    <div className="w-10/12 mx-auto mb-8">
-      <h3 className="uppercase font-semibold">Katla hari ini</h3>
-      <p className="text-xs mb-2 text-gray-400">
-        Mohon untuk tetap dirahasiakan
-      </p>
-      <p>
-        <strong>{answer}</strong>
-        {data.length > 0 ? (
-          data.length === 1 ? (
-            `: ${data[0]}`
-          ) : (
-            <ul className="text-sm">
-              {data.map((d, i) => (
-                <li className=" list-outside list-disc ml-6" key={i}>
-                  {d}
-                </li>
-              ))}
-            </ul>
-          )
-        ) : null}
-      </p>
-      <a
-        className="text-green-600 text-sm"
-        href={`https://kbbi.kemdikbud.go.id/entri/${answer}`}
-      >
-        Lihat di KBBI
-      </a>
-    </div>
-  );
+  return <div className="w-10/12 mx-auto mb-8"></div>;
 }

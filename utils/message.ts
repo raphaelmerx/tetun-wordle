@@ -1,16 +1,16 @@
 export function getCongratulationMessage(attempt: number) {
   switch (attempt) {
     case 0:
-      return "Menakjubkan";
+      return "Furak la halimar";
     case 1:
-      return "Luar Biasa";
+      return "Furak demais";
     case 2:
-      return "Mantap";
+      return "Furak loos";
     case 3:
-      return "Bagus Sekali";
+      return "Di'ak la halimar";
     case 4:
-      return "Bagus";
+      return "Di'ak loos";
     default:
-      return "Selamat";
+      return "Parabens";
   }
 }

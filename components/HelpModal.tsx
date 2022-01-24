@@ -12,7 +12,9 @@ export default function HelpModal(props: Props) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <Modal.Title>Oinsá atu halimar</Modal.Title>
       <div className="text-sm">
-        <p className="mb-2">Siik to&apos;ok liafuan, koko dala 6 ba okos.</p>
+        <p className="mb-2">
+          Siik to&apos;ok liafuan segredu, koko dala 6 ba okos.
+        </p>
         <p className="mb-2">
           Liafuan koko hotu-hotu tenke iha letra 5. Hanehan ENTER hodi haruka
           resposta.
@@ -75,7 +77,7 @@ export default function HelpModal(props: Props) {
           })}
         </div>
         <div className="mb-4">
-          Laiha letra <strong>K</strong> iha liafuan ida-ne&apos;e.
+          Laiha letra <strong>K</strong> iha liafuan segredu.
         </div>
         <hr className="border-gray-700 mb-4" />
         <p className="font-semibold">Sei iha liafuan foun loroloron!</p>

@@ -18,9 +18,16 @@ export default function SettingsModal(props: Props) {
   const { isOpen, onClose } = props;
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <Modal.Title>Informasi</Modal.Title>
+      <Modal.Title>Informasaun</Modal.Title>
       <p className="mb-4">
-        <strong>Katla</strong> merupakan <s>imitasi</s> adaptasi dari{" "}
+        <strong>Tetun World</strong> mak kopia hosi{" "}
+        <a
+          href="https://katla.vercel.app/"
+          className="text-green-600 hover:underline"
+        >
+          Katla
+        </a>{" "}
+        ne&apos;ebé adaptasaun hosi{" "}
         <a
           href="https://www.powerlanguage.co.uk/wordle/"
           className="text-green-600 hover:underline"
@@ -29,13 +36,13 @@ export default function SettingsModal(props: Props) {
         </a>
       </p>
       <p>
-        <h2 className="text-xl">Terdapat Masalah?</h2>
+        <h2 className="text-xl">Hetan problema bainhira uza game?</h2>
         <Link href="/debug">
-          <a className="text-green-600">Laporkan bug</a>
+          <a className="text-green-600">Haruka relatóriu bug</a>
         </Link>
-        <span> atau </span>
+        <span> ka </span>
         <button onClick={handleReset} className="text-green-600">
-          reset sesi sekarang
+          reset sesaun internet agora
         </button>
       </p>
     </Modal>

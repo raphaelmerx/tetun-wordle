@@ -35,7 +35,7 @@ export default function Debug(props: Props) {
           <p className="mb-4">
             Send this code to{" "}
             <a className="text-blue-400" href="https://twitter.com/raphaelmerx">
-              @pveyes
+              @raphaelmerx
             </a>{" "}
             on Twitter
           </p>
