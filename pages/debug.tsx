@@ -49,15 +49,20 @@ export default function Debug(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { hash, date } = await fetch("https://tetun-wordle.vercel.app/api/hash")
+  const hashes = await fetch("https://tetun-wordle.vercel.app/api/hash")
     .then((res) => res.json())
     .catch((error) => {
       return { hash: "d2WhZWJ1", date: "2022-01-24" };
     });
+  const currentDate = new Date().toJSON().slice(0, 10);
+  const currentHash =
+    typeof hashes === "object"
+      ? hashes
+      : hashes.filter((h) => h.date === currentDate)[0];
   return {
     props: {
-      hash: hash,
-      date: date,
+      hash: currentHash.hash,
+      date: currentHash.date,
     },
     revalidate: 60,
   };
