@@ -159,7 +159,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     .catch((error) => {
       return { hash: "d2WhZWJ1", date: "2022-01-24" };
     });
-  const currentDate = new Date().toJSON().slice(0, 10);
+  const dateTimor = new Date();
+  dateTimor.setHours(dateTimor.getHours() + 9);
+  const currentDate = dateTimor.toJSON().slice(0, 10);
   const currentHash = Array.isArray(hashes)
     ? hashes.filter((h) => h.date === currentDate)[0]
     : hashes;
