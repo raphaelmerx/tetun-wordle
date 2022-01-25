@@ -29,6 +29,6 @@ export default async function handler(
   );
   res.status(200).json({
     hash: "d2WhZWJ1",
-    date: "2022-01-24",
+    date: "2022-01-25",
   });
 }

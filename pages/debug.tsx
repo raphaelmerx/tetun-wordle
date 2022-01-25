@@ -55,10 +55,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       return { hash: "d2WhZWJ1", date: "2022-01-24" };
     });
   const currentDate = new Date().toJSON().slice(0, 10);
-  const currentHash =
-    typeof hashes === "object"
-      ? hashes
-      : hashes.filter((h) => h.date === currentDate)[0];
+  const currentHash = Array.isArray(hashes)
+    ? hashes.filter((h) => h.date === currentDate)[0]
+    : hashes;
   return {
     props: {
       hash: currentHash.hash,
