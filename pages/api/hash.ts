@@ -27,8 +27,8 @@ export default async function handler(
     "Cache-Control",
     "public, s-maxage=60, stale-while-revalidate=3600"
   );
-  res.status(200).json({
-    hash: "d2WhZWJ1",
-    date: "2022-01-25",
-  });
+  res.status(200).json([
+    { hash: "d2WhZWJ1", date: "2022-01-25" },
+    { hash: "Zl:qc151", date: "2022-01-26" },
+  ]);
 }
