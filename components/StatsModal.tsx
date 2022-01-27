@@ -58,8 +58,6 @@ export default function StatsModal(props: Props) {
       });
       text += `${answerEmojis.join("")}\n`;
     });
-
-    text += "\nhttps://tetun-wordle.vercel.app";
     return text;
   }
 
@@ -101,15 +99,9 @@ export default function StatsModal(props: Props) {
 
   function handleShare() {
     const text = generateText();
-    if ("share" in navigator) {
-      navigator.share({
-        text: text,
-      });
-    } else {
-      navigator.clipboard.writeText(text);
-      onClose();
-      showMessage("Kopia tiha ona");
-    }
+    navigator.clipboard.writeText(text);
+    onClose();
+    showMessage("Kopia tiha ona");
   }
 
   function handleShareToTwitter() {
