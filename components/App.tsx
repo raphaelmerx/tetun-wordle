@@ -87,7 +87,7 @@ export default function App(props: Props) {
     const userAnswer = gameState.answers[gameState.attempt];
     if (userAnswer.length < 5) {
       markInvalid();
-      showMessage("Tidak cukup huruf");
+      showMessage("Liafuan tenke iha letra 5");
       return;
     }
 
@@ -137,7 +137,7 @@ export default function App(props: Props) {
           maxStreak: stats.maxStreak,
         });
 
-        showMessage(`Jawaban: ${answer}`, () => {
+        showMessage(`Solusaun: ${answer}`, () => {
           showStats();
         });
       }
