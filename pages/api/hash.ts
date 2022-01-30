@@ -19,5 +19,15 @@ export default async function handler(
     { hash: "bmWyeGV1", date: "2022-01-29" },
     { hash: "b1:sbVt1", date: "2022-01-30" },
     { hash: "dmWxZVx1", date: "2022-01-31" },
+    { hash: "cVGrZVV1", date: "2022-02-01" },
+    { hash: "cFGyZV51", date: "2022-02-02" },
+    { hash: "cGWrbVt1", date: "2022-02-03" },
+    { hash: "ZlGjbWV1", date: "2022-02-04" },
+    { hash: "eV2gcmV1", date: "2022-02-05" },
+    { hash: "eF:jZV51", date: "2022-02-06" },
+    { hash: "bVe0ZVx1", date: "2022-02-07" },
+    { hash: "[F:h[V51", date: "2022-02-08" },
+    { hash: "cVW/bV51", date: "2022-02-09" },
+    { hash: "dlGneV51", date: "2022-02-10" },
   ]);
 }
