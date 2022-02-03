@@ -20,11 +20,11 @@ export default function HelpModal(props: Props) {
           resposta.
         </p>
         <p className="mb-2">
-          Depois de haruka resposta, kor letra sei muda hodi hatudu letra
+          Depoizde haruka resposta, kor letra sei muda hodi hatudu letra
           ne&apos;ebé loos ka lae.
         </p>
         <hr className="border-gray-700 mb-4" />
-        <strong className="text-lg mb-4 block">Por ezemplu</strong>
+        <strong className="text-lg mb-4 block">Porezemplu</strong>
         <div
           className="grid grid-cols-5 grid-rows-1 gap-1.5 w-64 mb-2"
           style={{ aspectRatio: "6 / 1" }}
@@ -77,7 +77,7 @@ export default function HelpModal(props: Props) {
           })}
         </div>
         <div className="mb-4">
-          Laiha letra <strong>K</strong> iha liafuan segredu.
+          La iha letra <strong>K</strong> iha liafuan segredu.
         </div>
         <hr className="border-gray-700 mb-4" />
         <p className="font-semibold">Sei iha liafuan foun loroloron!</p>
