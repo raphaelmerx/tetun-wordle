@@ -20,7 +20,7 @@ export default function HelpModal(props: Props) {
           resposta.
         </p>
         <p className="mb-2">
-          Depoizde haruka resposta, kor letra sei muda hodi hatudu letra
+          Depoizde haruka resposta, kór letra sei muda hodi hatudu letra
           ne&apos;ebé loos ka lae.
         </p>
         <hr className="border-gray-700 mb-4" />
@@ -47,7 +47,7 @@ export default function HelpModal(props: Props) {
           className="grid grid-cols-5 grid-rows-1 gap-1.5 w-64 mb-2"
           style={{ aspectRatio: "6 / 1" }}
         >
-          {"salju".split("").map((char, i) => {
+          {"saldu".split("").map((char, i) => {
             return (
               <Tile
                 key={i}
