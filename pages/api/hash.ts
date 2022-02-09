@@ -29,5 +29,15 @@ export default async function handler(
     { hash: "[F:h[V51", date: "2022-02-08" },
     { hash: "cVW/bV51", date: "2022-02-09" },
     { hash: "dlGneV51", date: "2022-02-10" },
+    { hash: "ZlGofFF1", date: "2022-02-11" },
+    { hash: "cFWvdlF1", date: "2022-02-12" },
+    { hash: "b160ZVt1", date: "2022-02-13" },
+    { hash: "bl:1[V51", date: "2022-02-14" },
+    { hash: "b1Wr[V51", date: "2022-02-15" },
+    { hash: "ZWKuZlF1", date: "2022-02-16" },
+    { hash: "bFGtZVl1", date: "2022-02-17" },
+    { hash: "[GWvcFF1", date: "2022-02-18" },
+    { hash: "cWWt[GV1", date: "2022-02-19" },
+    { hash: "eGW/ZV51", date: "2022-02-20" },
   ]);
 }
