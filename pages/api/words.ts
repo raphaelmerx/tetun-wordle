@@ -4,7 +4,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const tetunorg = await fetch(
-    "https://tetun.org/static/tet-64c2165f04476c65e620a737a5a2aecb.json"
+    "https://tetun.org/static/tet-50e2b0ec0be32e9c7153f4ec20c9a96a.json"
   ).then((res) => res.json());
   const words = Object.keys(tetunorg)
     .map((entry) => {
