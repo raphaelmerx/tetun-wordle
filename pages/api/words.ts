@@ -3,8 +3,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  // find the hash from tetun.org
+  const tetunHash = await fetch("https://tetun.org/static/js/app.js")
+    .then((response) => response.text())
+    .then((text) => {
+      const matches = text.match(/"(tet-.{32})"/);
+      return matches[1];
+    });
   const tetunorg = await fetch(
-    "https://tetun.org/static/tet-50e2b0ec0be32e9c7153f4ec20c9a96a.json"
+    `https://tetun.org/static/${tetunHash}.json`
   ).then((res) => res.json());
   const words = Object.keys(tetunorg)
     .map((entry) => {
