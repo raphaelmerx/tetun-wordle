@@ -205,7 +205,7 @@ export default function StatsModal(props: Props) {
                 className="bg-green-700 py-1 md:py-3 px-3 md:px-6 rounded-md font-semibold uppercase text-xl flex flex-1 flex-row gap-2 items-center justify-center"
                 style={{ backgroundColor: "#00acee" }}
               >
-                <div>Share</div>
+                <div>Tweet</div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -260,7 +260,9 @@ function RemainingTime() {
 }
 
 function WordDefinition({ answer }) {
-  const { data = [] } = useSWR(`/api/define/${answer}`, fetcher);
-
-  return <div className="w-10/12 mx-auto mb-8"></div>;
+  return (
+    <a target="_blank" rel="noreferrer" href={`https://tetun.org?q=${answer}`}>
+      Haree definisaun iha tetun.org
+    </a>
+  );
 }
