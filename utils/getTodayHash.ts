@@ -1,16 +1,17 @@
+import { encode } from "./codec";
+
 const getTodayHash = async () => {
-  const hashes = await fetch("https://tetun-wordle.vercel.app/api/hash")
-    .then((res) => res.json())
-    .catch((error) => {
-      return { hash: "d2WhZWJ1", date: "2022-01-24" };
-    });
+  const tetunWords = await fetch(
+    "https://tetun-wordle.vercel.app/api/words"
+  ).then((response) => response.json());
+
   const dateTimor = new Date();
   dateTimor.setHours(dateTimor.getHours() + 9);
   const currentDate = dateTimor.toJSON().slice(0, 10);
-  const currentHash = Array.isArray(hashes)
-    ? hashes.filter((h) => h.date === currentDate)[0]
-    : hashes;
-  return currentHash;
+
+  const index =
+    (Number(currentDate.replace(/-/g, "")) * 311) % tetunWords.length;
+  return { hash: encode(tetunWords[index]), date: currentDate };
 };
 
 export default getTodayHash;
