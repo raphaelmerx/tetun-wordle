@@ -37,7 +37,9 @@ const getMatadalanWords = async () => {
   const words = await fetch(
     `https://tetun.org/static/matadalan_5_letter.txt`
   ).then((res) => res.text());
-  return words.split("\n").map((w) => normaliseWord(w));
+  const wordsList = words.split("\n");
+  wordsList.push("folin");
+  return wordsList.map((w) => normaliseWord(w));
 };
 
 export default async function handler(
