@@ -1,7 +1,7 @@
 {
   "name": "katla",
   "engines": {
-    "node": "^18.20.4"
+    "node": "^20.19.0"
   },
   "private": true,
   "scripts": {
