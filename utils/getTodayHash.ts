@@ -2,9 +2,11 @@ import { encode } from "./codec";
 
 const getTodayHash = async () => {
   const response = await fetch(
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/api/words"
-      : "https://tetun-wordle.vercel.app/api/words"
+    `${
+      process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+        : "http://localhost:3001"
+    }/api/words`
   );
   const tetunWords = await response.json();
 
