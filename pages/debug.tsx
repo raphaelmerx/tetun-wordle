@@ -24,7 +24,7 @@ export default function Debug(props: Props) {
         )
       )
     );
-  }, []);
+  }, [props.hash, props.date]);
 
   return (
     <div className="text-white max-w-lg mx-auto mt-4">
@@ -50,12 +50,23 @@ export default function Debug(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { hash, date } = await getTodayHash();
-  return {
-    props: {
-      hash: hash,
-      date: date,
-    },
-    revalidate: 60,
-  };
+  try {
+    const { hash, date } = await getTodayHash();
+    return {
+      props: {
+        hash: hash,
+        date: date,
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    // Return empty values if file cannot be read during build
+    return {
+      props: {
+        hash: "",
+        date: "",
+      },
+      revalidate: 60,
+    };
+  }
 };
